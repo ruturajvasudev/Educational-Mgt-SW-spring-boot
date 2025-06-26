@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+        }
+        .dashboard-header {
+            padding: 15px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .card {
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+        .card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .dashboard-title {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="dashboard-header">
+        <h5>Welcome, Admin</h5>
+    </div>
+
+    <div class="container">
+        <h2 class="dashboard-title">Dashboard</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Add Courses</h5>
+                    <p>Add or edit course offerings.</p>
+                    <a href="/courses/add" class="btn btn-primary">Add Course</a>
+                    <a href="/courses/view" class="btn btn-outline-secondary mt-2">View Courses</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Add Student</h5>
+                    <p>Register a new student.</p>
+                    <a href="/register" class="btn btn-primary">Register Student</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Manage Student Details</h5>
+                    <p>View, update, or delete student records.</p>
+                    <a href="/students" class="btn btn-primary">Manage Students</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Employee Details</h5>
+                    <p>Manage faculty and staff records.</p>
+					<a href="/employees/add" class="btn btn-primary">Add new Employee</a>
+					<a href="/employees/view" class="btn btn-outline-secondary mt-2">Manage Employees</a>
+			 </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Fees Management</h5>
+                    <p>Record and update fee payments.</p>
+                    <a href="/fees/manage" class="btn btn-primary">Manage Fees</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Expenditure</h5>
+                    <p>Track institutional expenses.</p>
+                    <a href="#" class="btn btn-primary">View Expenses</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Fee Reminders</h5>
+                    <p>Send fee due notifications.</p>
+                    <a href="#" class="btn btn-primary">Send Reminders</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Admissions</h5>
+                    <p>Manage new admissions.</p>
+					<a href="/enrollments/add" class="btn btn-primary">New Admission</a>
+					<a href="/enrollments/view" class="btn btn-outline-secondary mt-2">View Admissions</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Placement Records</h5>
+                    <p>Track student placement data.</p>
+                    <a href="#" class="btn btn-primary">View Placements</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

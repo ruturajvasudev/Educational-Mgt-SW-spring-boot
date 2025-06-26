@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Course</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Edit Course</h2>
+    <form th:action="@{/courses/update}" method="post" th:object="${course}">
+        <input type="hidden" th:field="*{id}" />
+        <div class="mb-3">
+            <label>Course Code</label>
+            <input type="text" th:field="*{courseCode}" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label>Name</label>
+            <input type="text" th:field="*{name}" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label>Duration (weeks)</label>
+            <input type="number" th:field="*{durationWeeks}" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label>Start Date</label>
+            <input type="date" th:field="*{startDate}" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Teacher ID</label>
+            <input type="text" th:field="*{teacherId}" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Mode</label>
+            <input type="text" th:field="*{mode}" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Course Fee</label>
+            <input type="number" step="0.01" th:field="*{courseFee}" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Active</label>
+            <input type="checkbox" th:field="*{active}" class="form-check-input" />
+        </div>
+        <div class="mb-3">
+            <label>Syllabus</label>
+            <textarea th:field="*{syllabus}" class="form-control" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Update Course</button>
+    </form>
+</div>
+</body>
+</html>
